@@ -1,0 +1,40 @@
+---
+groups:
+  - id: OneStopCOBOL
+    url: http://tech.groups.yahoo.com/group/OneStopCOBOL/
+    name: OneStopCOBOL
+    description: OneStopCOBOL - Official COBOL group
+    defunct: false
+    post_email: OneStopCOBOL@yahoogroups.com
+    subscribe_email: OneStopCOBOL-subscribe@yahoogroups.com
+    owner_email: OneStopCOBOL-owner@yahoogroups.com
+    unsubscribe_email: OneStopCOBOL-unsubscribe@yahoogroups.com
+
+  - id: Cambridge-Freegle
+    url: http://groups.yahoo.com/group/Cambridge-Freegle/
+    name: Cambridge-Freegle
+    description: 
+    defunct: false
+    post_email: Cambridge-Freegle@yahoogroups.com
+    subscribe_email: Cambridge-Freegle-subscribe@yahoogroups.com
+    owner_email: Cambridge-Freegle-owner@yahoogroups.com
+    unsubscribe_email: Cambridge-Freegle-unsubscribe@yahoogroups.com
+
+  - id: Freecycle_MV
+    url: http://groups.yahoo.com/group/Freecycle_MV/
+    defunct: true
+
+  - id: blackpool-freecycle
+    url: http://groups.yahoo.com/group/blackpool-freecycle/
+    defunct: false
+    private: true
+
+  - id: Dursleyfreecycle
+    url: http://groups.yahoo.com/group/Dursleyfreecycle/
+    name: DursleyFreecycle
+    description: DursleyFreecycle(R)
+    defunct: false
+    post_email: DursleyFreecycle@yahoogroups.co.uk
+    subscribe_email: DursleyFreecycle-subscribe@yahoogroups.co.uk
+    owner_email: DursleyFreecycle-owner@yahoogroups.co.uk
+    unsubscribe_email: DursleyFreecycle-unsubscribe@yahoogroups.co.uk
