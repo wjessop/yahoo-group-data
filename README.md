@@ -39,10 +39,10 @@ Or install it yourself as:
 ## TODO
 
 * Parse out
-** Number of members
-** Founded date
-** Category
-** Language
+* * Number of members
+* * Founded date
+* * Category
+* * Language
 
 ## Contributing
 
@@ -58,7 +58,7 @@ Or install it yourself as:
 
 Rather than distribute a load of Yahoo's HTML pages with the gem there's a rake task to get the ones that are needed. Run:
 
-`rake fetch_yahoo_pages`
+	`rake fetch_yahoo_pages`
 
 after that:
 
