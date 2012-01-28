@@ -57,7 +57,7 @@ class YahooGroupData
 
 	private
 
-	attr_reader :html, :doc, :defunct #, :private_group
+	attr_reader :html, :doc
 
 	def doc
 		@doc ||= Nokogiri::HTML(html)
