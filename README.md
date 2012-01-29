@@ -83,6 +83,8 @@ after that:
 
 	$ rake test
 
+Because of the dynamic nature of Yahoo groups it's quite possible that the number of members a group has in groups.yml will have diverged with the number of members in reality when you pull down the pages using "rake fetch_yahoo_pages". If you see any of these divergences just update groups.yml appropriately.
+
 ### If you find a group the gem fails on
 
 Tell me about it, or (in preference) update the gem (Hint: start by adding an entry to the groups.yml file), see contributing instructions above.
