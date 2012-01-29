@@ -1,6 +1,6 @@
 # yahoo-group-data gem
 
-Yahoo doesn't provide an API to it's publicly available group info, so this gem covers that gap. Use it to find out the publicly available group information of a Yahoo group such as name, description and relevant email addresses.
+Yahoo doesn't provide an API to it's publicly available group info, so this gem covers that gap. Use it to find information about a Yahoo group such as name, description and relevant email addresses.
 
 ## Example
 
