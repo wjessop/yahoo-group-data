@@ -58,11 +58,11 @@ Or install it yourself as:
 
 Rather than distribute a load of Yahoo's HTML pages with the gem there's a rake task to get the ones that are needed. Run:
 
-	`rake fetch_yahoo_pages`
+	$ rake fetch_yahoo_pages
 
 after that:
 
-	rake test
+	$ rake test
 
 ### If you find a group the gem fails on
 
