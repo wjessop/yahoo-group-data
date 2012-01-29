@@ -11,12 +11,39 @@ g = YahooGroupData.new("http://tech.groups.yahoo.com/group/OneStopCOBOL/")
 
 name = g.name
 description = g.description
+num_members = g.num_members
 
 p = g.post_email
 s = g.subscribe_email
 u = g.unsubscribe_email
 o = g.unsubscribe_email
 ```
+
+### Available instance methods
+
+These should be relatively self-explanatory. Where the data is unnavailable (for instance the group name if no group was found) the return value will be nil
+
+#### Boolean values:
+
+- not_found?
+- private?
+- age_restricted?
+
+#### String values
+
+- name
+- description
+- post_email
+- subscribe_email
+- owner_email
+- unsubscribe_email
+- language
+- category
+
+#### Other values
+
+- num_members (Integer)
+- founded (Date)
 
 ## Requirements
 
@@ -35,14 +62,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install yahoo-group-data
-
-## TODO
-
-* Parse out
-* * Number of members
-* * Founded date
-* * Category
-* * Language
 
 ## Contributing
 

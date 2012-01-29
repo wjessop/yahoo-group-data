@@ -1,40 +1,138 @@
 ---
 groups:
+    # Baseline group
   - id: OneStopCOBOL
     url: http://tech.groups.yahoo.com/group/OneStopCOBOL/
     name: OneStopCOBOL
     description: OneStopCOBOL - Official COBOL group
-    defunct: false
+    not_found: false
+    private: false
+    age_restricted: false
+    founded: Jun 24, 2008
+    language: English
+    num_members: 151
+    category: COBOL
     post_email: OneStopCOBOL@yahoogroups.com
     subscribe_email: OneStopCOBOL-subscribe@yahoogroups.com
     owner_email: OneStopCOBOL-owner@yahoogroups.com
     unsubscribe_email: OneStopCOBOL-unsubscribe@yahoogroups.com
 
+    # nil description
   - id: Cambridge-Freegle
     url: http://groups.yahoo.com/group/Cambridge-Freegle/
     name: Cambridge-Freegle
     description: 
-    defunct: false
+    not_found: false
+    private: false
+    age_restricted: false
+    founded: Aug 24, 2011
+    language: English
+    num_members: 160
+    category: Recycling
     post_email: Cambridge-Freegle@yahoogroups.com
     subscribe_email: Cambridge-Freegle-subscribe@yahoogroups.com
     owner_email: Cambridge-Freegle-owner@yahoogroups.com
     unsubscribe_email: Cambridge-Freegle-unsubscribe@yahoogroups.com
 
+    # non-existant group
   - id: Freecycle_MV
     url: http://groups.yahoo.com/group/Freecycle_MV/
-    defunct: true
+    name: 
+    description: 
+    not_found: true
+    private: 
+    age_restricted: 
+    founded: 
+    language: 
+    num_members: 
+    category: 
+    post_email: 
+    subscribe_email: 
+    owner_email: 
+    unsubscribe_email: 
 
+    # private group
   - id: blackpool-freecycle
     url: http://groups.yahoo.com/group/blackpool-freecycle/
-    defunct: false
+    name: blackpool-freecycle
+    description: 
+    not_found: false
     private: true
+    age_restricted: 
+    founded: 
+    language: 
+    num_members: 
+    category: 
+    post_email: 
+    subscribe_email: 
+    owner_email: 
+    unsubscribe_email: 
 
+    # Age restricted group
+  - id: NapaCountyCAFreecycle
+    url: http://groups.yahoo.com/group/NapaCountyCAFreecycle
+    name: 
+    description: 
+    not_found: false
+    private: 
+    age_restricted: true
+    founded: 
+    language: 
+    num_members: 
+    category: 
+    post_email: 
+    subscribe_email: 
+    owner_email: 
+    unsubscribe_email: 
+
+    # "Related Link:" in email address element
   - id: Dursleyfreecycle
     url: http://groups.yahoo.com/group/Dursleyfreecycle/
     name: DursleyFreecycle
     description: DursleyFreecycle(R)
-    defunct: false
+    not_found: false
+    private: false
+    age_restricted: false
+    founded: Sep 13, 2009
+    language: English
+    num_members: 1
+    category: Recycling
     post_email: DursleyFreecycle@yahoogroups.co.uk
     subscribe_email: DursleyFreecycle-subscribe@yahoogroups.co.uk
     owner_email: DursleyFreecycle-owner@yahoogroups.co.uk
     unsubscribe_email: DursleyFreecycle-unsubscribe@yahoogroups.co.uk
+
+    # nil Category
+  - id: redcar-cleveland-freegle
+    url: http://groups.yahoo.com/group/redcar-cleveland-freegle/
+    name: redcar-cleveland-freegle
+    description: Redcar & Cleveland Freegle
+    not_found: false
+    private: false
+    age_restricted: false
+    founded: Mar 30, 2007
+    language: English
+    num_members: 2985
+    category: 
+    post_email: redcar-cleveland-freegle@yahoogroups.com
+    subscribe_email: redcar-cleveland-freegle-subscribe@yahoogroups.com
+    owner_email: redcar-cleveland-freegle-owner@yahoogroups.com
+    unsubscribe_email: redcar-cleveland-freegle-unsubscribe@yahoogroups.com
+
+    # Foreign language, particularly for the date format
+  - id: 
+    url: http://de.groups.yahoo.com/group/freecycle-michelstadt/
+    name: freecycle-michelstadt
+    description: Freecycle Michelstadt / Odenwald
+    not_found: false
+    private: false
+    age_restricted: false
+    founded: Mai 6, 2004
+    language: Deutsch
+    num_members: 63
+    category: Kostenlos
+    post_email: freecycle-michelstadt@yahoogroups.de
+    subscribe_email: freecycle-michelstadt-subscribe@yahoogroups.de
+    owner_email: freecycle-michelstadt-owner@yahoogroups.de
+    unsubscribe_email: freecycle-michelstadt-unsubscribe@yahoogroups.de
+
