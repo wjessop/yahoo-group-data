@@ -1,4 +1,8 @@
 # encoding: utf-8
+
+require 'simplecov'
+SimpleCov.start
+
 def date_str_to_english(date_str)
 	date_str.
 		gsub(/ene/i, "Jan").
