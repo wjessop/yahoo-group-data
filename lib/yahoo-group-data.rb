@@ -4,6 +4,7 @@ require 'curb'
 require 'uri'
 require 'nokogiri'
 require 'date'
+require 'yajl'
 
 class YahooGroupData
 	def initialize(url)
@@ -16,7 +17,11 @@ class YahooGroupData
 	end
 
 	def name
-		@name ||= no_data? ? nil : doc.css('span.ygrp-pname').first.content
+		@name ||= if not_found? || age_restricted?
+				nil
+			else
+				doc.css('span.ygrp-pname').first.content
+			end
 	end
 
 	def description
@@ -43,10 +48,8 @@ class YahooGroupData
 	end
 
 	def private?
-		@private_group ||= (
-			doc.xpath('/html/body/div[3]/center/p/big').size > 0 and
-			doc.xpath('/html/body/div[3]/center/p/big').first.content.strip.match(/Sorry, this group is available to members ONLY./i)
-		) ? true : false
+		return nil if not_found? || matches_age_restricted?
+		matches_private?
 	end
 
 	def not_found?
@@ -59,7 +62,8 @@ class YahooGroupData
 	end
 
 	def age_restricted?
-		@age_restricted ||= (doc.xpath('/html/body/div[3]/div/div/div/h4').size > 0 and doc.xpath('/html/body/div[3]/div/div/div/h4').first.inner_html.strip.match(/You've reached an Age-Restricted Area/i)) ? true : false
+		return nil if not_found? or matches_private?
+		matches_age_restricted?
 	end
 
 	def founded
@@ -71,15 +75,49 @@ class YahooGroupData
 	end
 
 	def num_members
-		Integer(doc.xpath('//ul[@class="ygrp-ul ygrp-info"]//li[1]').inner_html.split(':')[1].strip)
+		@num_members ||= no_data? ? nil : Integer(doc.xpath('//ul[@class="ygrp-ul ygrp-info"]//li[1]').inner_html.split(':')[1])
 	end
 
 	def category
 		return unless has_category?
-		doc.xpath('/html/body/div[3]/table/tr/td/div[2]/div[2]/div/ul/li[2]/a').inner_html
+		@category ||= no_data? ? nil : doc.xpath('/html/body/div[3]/table/tr/td/div[2]/div[2]/div/ul/li[2]/a').inner_html
+	end
+
+	def to_json
+
+		data_methods = %w{
+			private?
+			not_found?
+			age_restricted?
+			name
+			description
+			post_email
+			subscribe_email
+			owner_email
+			unsubscribe_email
+			language
+			num_members
+			category
+			founded
+		}
+
+		data_hash = {}
+		data_methods.map {|dm| data_hash[dm.tr('?', '')] = send(dm)}
+		Yajl::Encoder.encode(data_hash)
 	end
 
 	private
+
+	def matches_private?
+		@matches_private ||= (
+			doc.xpath('/html/body/div[3]/center/p/big').size > 0 and
+			doc.xpath('/html/body/div[3]/center/p/big').first.content.strip.match(/Sorry, this group is available to members ONLY./i)
+		) ? true : false
+	end
+
+	def matches_age_restricted?
+		@matches_age_restricted ||= (doc.xpath('/html/body/div[3]/div/div/div/h4').size > 0 and doc.xpath('/html/body/div[3]/div/div/div/h4').first.inner_html.strip.match(/You've reached an Age-Restricted Area/i)) ? true : false
+	end
 
 	def no_data?
 		private? or age_restricted? or not_found?

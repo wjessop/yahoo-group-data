@@ -8,7 +8,7 @@ groups:
     not_found: false
     private: false
     age_restricted: false
-    founded: Jun 24, 2008
+    founded: 2008-06-24
     language: English
     num_members: 151
     category: COBOL
@@ -25,9 +25,9 @@ groups:
     not_found: false
     private: false
     age_restricted: false
-    founded: Aug 24, 2011
+    founded: 2011-08-24
     language: English
-    num_members: 160
+    num_members: 164
     category: Recycling
     post_email: Cambridge-Freegle@yahoogroups.com
     subscribe_email: Cambridge-Freegle-subscribe@yahoogroups.com
@@ -93,7 +93,7 @@ groups:
     not_found: false
     private: false
     age_restricted: false
-    founded: Sep 13, 2009
+    founded: 2009-09-13
     language: English
     num_members: 1
     category: Recycling
@@ -110,9 +110,9 @@ groups:
     not_found: false
     private: false
     age_restricted: false
-    founded: Mar 30, 2007
+    founded: 2007-03-30
     language: English
-    num_members: 2984
+    num_members: 2973
     category: 
     post_email: redcar-cleveland-freegle@yahoogroups.com
     subscribe_email: redcar-cleveland-freegle-subscribe@yahoogroups.com
@@ -127,7 +127,7 @@ groups:
     not_found: false
     private: false
     age_restricted: false
-    founded: Mai 6, 2004
+    founded: 2004-05-06
     language: Deutsch
     num_members: 63
     category: Kostenlos
