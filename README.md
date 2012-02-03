@@ -17,6 +17,8 @@ p = g.post_email
 s = g.subscribe_email
 u = g.unsubscribe_email
 o = g.unsubscribe_email
+
+json = g.to_json
 ```
 
 ### Available instance methods
@@ -39,6 +41,7 @@ These should be relatively self-explanatory. Where the data is unnavailable (for
 - unsubscribe_email
 - language
 - category
+- to_json
 
 #### Other values
 
