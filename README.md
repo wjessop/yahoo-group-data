@@ -30,6 +30,7 @@ These should be relatively self-explanatory. Where the data is unnavailable (for
 - not_found?
 - private?
 - age_restricted?
+- no_data? (true if any of the above are true, othersise false. Here for convenience)
 
 #### String values
 

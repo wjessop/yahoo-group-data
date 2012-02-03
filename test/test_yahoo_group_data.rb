@@ -31,6 +31,16 @@ class YahooGroupDataTest < Test::Unit::TestCase
 		end
 	end
 
+	def test_no_data
+		YAML.load_file('test/groups.yml')["groups"].each do |original_group|
+			stub_request(:get, original_group["url"]).
+				to_return(:status => 200, :body => File.read("test/yahoo_pages/#{original_group['id']}.html"), :headers => {})
+
+			g = YahooGroupData.new(original_group["url"])
+			assert_equal g.no_data?, (original_group['private'] || original_group['not_found'] || original_group['age_restricted'])
+		end
+	end
+
 	def test_initialize_with_invalid_params
 		assert_raise(ArgumentError)  { YahooGroupData.new }
 	end

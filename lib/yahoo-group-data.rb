@@ -106,6 +106,10 @@ class YahooGroupData
 		Yajl::Encoder.encode(data_hash)
 	end
 
+	def no_data?
+		private? or age_restricted? or not_found?
+	end
+
 	private
 
 	def matches_private?
@@ -117,10 +121,6 @@ class YahooGroupData
 
 	def matches_age_restricted?
 		@matches_age_restricted ||= (doc.xpath('/html/body/div[3]/div/div/div/h4').size > 0 and doc.xpath('/html/body/div[3]/div/div/div/h4').first.inner_html.strip.match(/You've reached an Age-Restricted Area/i)) ? true : false
-	end
-
-	def no_data?
-		private? or age_restricted? or not_found?
 	end
 
 	# French:     jan,fév,mar,avr,mai,jun,jul,aoû,sep,oct,nov,déc
