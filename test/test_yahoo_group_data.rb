@@ -13,7 +13,6 @@ class YahooGroupDataTest < Test::Unit::TestCase
 				to_return(:status => 200, :body => File.read("test/yahoo_pages/#{original_group['id']}.html"), :headers => {})
 
 			g = YahooGroupData.new(original_group["url"])
-			puts original_group["url"]
 			data = Yajl::Parser.parse(g.to_json)
 
 			assert_equal original_group['private'], data['private']
@@ -65,7 +64,6 @@ class YahooGroupDataTest < Test::Unit::TestCase
 	# then runs the assertions on each one.
 	def test_data_extraction
 		YAML.load_file('test/groups.yml')["groups"].each do |g_data|
-			puts "fetching #{g_data["url"]}"
 			stub_request(:get, g_data["url"]).
 			to_return(:status => 200, :body => File.read("test/yahoo_pages/#{g_data['id']}.html"), :headers => {})
 
