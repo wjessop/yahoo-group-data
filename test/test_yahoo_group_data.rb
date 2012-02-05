@@ -93,4 +93,27 @@ class YahooGroupDataTest < Test::Unit::TestCase
 			assert_equal g_data["category"], group.category
 		end
 	end
+
+	def test_404
+		missing_url = "http://tech.groups.yahoo.com/group/OneStopCOBOL/asdasd"
+		stub_request(:get, missing_url).
+			to_return(:status => 404, :body => "", :headers => {})
+			group = YahooGroupData.new(missing_url)
+			
+			assert_nil group.age_restricted?
+			assert_nil group.private?
+			assert_nil group.name
+			assert_nil group.description
+			assert_nil group.post_email
+			assert_nil group.subscribe_email
+			assert_nil group.owner_email
+			assert_nil group.unsubscribe_email
+			assert_nil group.founded
+			assert_nil group.language
+			assert_nil group.num_members
+			assert_nil group.category
+
+			assert group.not_found?
+			assert group.no_data?
+	end
 end

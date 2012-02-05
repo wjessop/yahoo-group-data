@@ -14,6 +14,7 @@ class YahooGroupData
 		curb.follow_location = true
 		curb.http_get
 		@html = curb.body_str.force_encoding('iso-8859-1').encode("UTF-8")
+		@response_code = curb.response_code
 	end
 
 	def name
@@ -53,7 +54,7 @@ class YahooGroupData
 	end
 
 	def not_found?
-		@not_found ||= (
+		@not_found ||= (response_was_404? ||
 			(
 				doc.xpath('/html/body/div[3]/div/div/div/h3').size > 0 and
 				doc.xpath('/html/body/div[3]/div/div/div/h3').first.content.strip.match(/Group Not Found|Group nicht gefunden/i)
@@ -111,6 +112,12 @@ class YahooGroupData
 	end
 
 	private
+
+	attr_reader :response_code
+
+	def response_was_404?
+		response_code == 404
+	end
 
 	def matches_private?
 		@matches_private ||= (
