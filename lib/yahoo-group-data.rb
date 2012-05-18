@@ -153,7 +153,7 @@ class YahooGroupData
 	attr_reader :html, :doc
 
 	def has_category?
-    doc.xpath('//ul[@class="ygrp-ul ygrp-info"]//li').count == 3 ? false : true
+		doc.xpath('//ul[@class="ygrp-ul ygrp-info"]//li').count == 3 ? false : true
 	end
 
 	def doc
