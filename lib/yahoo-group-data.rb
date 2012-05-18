@@ -17,6 +17,10 @@ class YahooGroupData
 		@response_code = curb.response_code
 	end
 
+	def has_key?(key)
+		respond_to? key
+	end
+
 	def [](thing)
 		return unless respond_to? thing
 		send(thing)

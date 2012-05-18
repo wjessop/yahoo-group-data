@@ -50,6 +50,13 @@ class YahooGroupDataTest < Test::Unit::TestCase
 
 			# Non-existant data
 			assert_nil g[:nameWOOOOOO]
+			assert_nil g["nameWOOOOOO"]
+
+			assert g.has_key?("name")
+			assert g.has_key?(:name)
+
+			assert !g.has_key?("nameWOOOOOO")
+			assert !g.has_key?(:nameWOOOOOO)
 		end
 	end
 
