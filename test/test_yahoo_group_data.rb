@@ -7,7 +7,7 @@ require 'yajl'
 
 class YahooGroupDataTest < Test::Unit::TestCase
 
-	def test_to_json		
+	def test_to_json
 		YAML.load_file('test/groups.yml')["groups"].each do |original_group|
 			stub_request(:get, original_group["url"]).
 				to_return(:status => 200, :body => File.read("test/yahoo_pages/#{original_group['id']}.html"), :headers => {})
