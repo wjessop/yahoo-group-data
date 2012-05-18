@@ -65,8 +65,12 @@ class YahooGroupData
 	def not_found?
 		@not_found ||= (response_was_404? ||
 			(
-				doc.xpath('/html/body/div[3]/div/div/div/h3').size > 0 and
-				doc.xpath('/html/body/div[3]/div/div/div/h3').first.content.strip.match(/Group Not Found|Group nicht gefunden/i)
+				(
+					doc.xpath('/html/body/div[3]/div/div/div/h3').size > 0 and doc.xpath('/html/body/div[3]/div/div/div/h3').first.content.strip.match(/Group Not Found|Group nicht gefunden/i)
+				) ||
+				(
+					doc.xpath('//*[@id="bodyID"]/div[4]/div/div/div/h3').inner_html.strip.match(/Group Not Found|Group nicht gefunden/i)
+				)
 			) ? true : false
 		)
 	end
@@ -90,7 +94,7 @@ class YahooGroupData
 
 	def category
 		return unless has_category?
-		@category ||= no_data? ? nil : doc.xpath('/html/body/div[3]/table/tr/td/div[2]/div[2]/div/ul/li[2]/a').inner_html
+		@category ||= no_data? ? nil : doc.xpath('//*[@id="yginfo"]/ul/li[2]/a').inner_html
 	end
 
 	def to_json
@@ -130,8 +134,14 @@ class YahooGroupData
 
 	def matches_private?
 		@matches_private ||= (
-			doc.xpath('/html/body/div[3]/center/p/big').size > 0 and
-			doc.xpath('/html/body/div[3]/center/p/big').first.content.strip.match(/Sorry, this group is available to members ONLY./i)
+			(
+				doc.xpath('/html/body/div[3]/center/p/big').size > 0 and
+				doc.xpath('/html/body/div[3]/center/p/big').first.content.strip.match(/Sorry, this group is available to members ONLY./i)
+			) ||
+			(
+				doc.xpath('//*[@id="bodyID"]/div[4]/center/p/big/text()[1]') && doc.xpath('//*[@id="bodyID"]/div[4]/center/p/big/text()[1]').first &&
+				doc.xpath('//*[@id="bodyID"]/div[4]/center/p/big/text()[1]').first.content.strip.match(/Sorry, this group is available to members ONLY./i)
+			)
 		) ? true : false
 	end
 

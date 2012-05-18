@@ -10,7 +10,7 @@ groups:
     age_restricted: false
     founded: 2008-06-24
     language: English
-    num_members: 151
+    num_members: 160
     category: COBOL
     post_email: OneStopCOBOL@yahoogroups.com
     subscribe_email: OneStopCOBOL-subscribe@yahoogroups.com
@@ -27,7 +27,7 @@ groups:
     age_restricted: false
     founded: 2011-08-24
     language: English
-    num_members: 164
+    num_members: 359
     category: Recycling
     post_email: Cambridge-Freegle@yahoogroups.com
     subscribe_email: Cambridge-Freegle-subscribe@yahoogroups.com
@@ -51,7 +51,7 @@ groups:
     owner_email: 
     unsubscribe_email: 
 
-    # private group
+    # private / Members only groups
   - id: blackpool-freecycle
     url: http://groups.yahoo.com/group/blackpool-freecycle/
     name: blackpool-freecycle
@@ -68,9 +68,25 @@ groups:
     owner_email: 
     unsubscribe_email: 
 
+  - id: anokacountyfc
+    url: http://groups.yahoo.com/group/anokacountyfc/
+    name: anokacountyfc
+    description: 
+    not_found: false
+    private: true
+    age_restricted: 
+    founded: 
+    language: 
+    num_members: 
+    category: 
+    post_email: 
+    subscribe_email: 
+    owner_email: 
+    unsubscribe_email: 
+
     # Age restricted group
-  - id: NapaCountyCAFreecycle
-    url: http://groups.yahoo.com/group/NapaCountyCAFreecycle
+  - id: Fetish_Groups
+    url: http://groups.yahoo.com/group/Fetish_Groups/
     name: 
     description: 
     not_found: false
@@ -112,7 +128,7 @@ groups:
     age_restricted: false
     founded: 2007-03-30
     language: English
-    num_members: 2973
+    num_members: 3019
     category: 
     post_email: redcar-cleveland-freegle@yahoogroups.com
     subscribe_email: redcar-cleveland-freegle-subscribe@yahoogroups.com
@@ -129,7 +145,7 @@ groups:
     age_restricted: false
     founded: 2004-05-06
     language: Deutsch
-    num_members: 63
+    num_members: 68
     category: Kostenlos
     post_email: freecycle-michelstadt@yahoogroups.de
     subscribe_email: freecycle-michelstadt-subscribe@yahoogroups.de
