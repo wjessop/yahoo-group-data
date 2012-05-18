@@ -17,6 +17,11 @@ class YahooGroupData
 		@response_code = curb.response_code
 	end
 
+	def [](thing)
+		return unless respond_to? thing
+		send(thing)
+	end
+
 	def name
 		@name ||= if not_found? || age_restricted?
 				nil

@@ -31,6 +31,28 @@ class YahooGroupDataTest < Test::Unit::TestCase
 		end
 	end
 
+		def test_hash_access
+		YAML.load_file('test/groups.yml')["groups"].each do |original_group|
+			stub_request(:get, original_group["url"]).
+				to_return(:status => 200, :body => File.read("test/yahoo_pages/#{original_group['id']}.html"), :headers => {})
+
+			g = YahooGroupData.new(original_group["url"])
+
+			# Real data
+			assert_equal original_group['private'], g['private?']
+			assert_equal original_group['private'], g[:private?]
+			assert_equal original_group['not_found'], g['not_found?']
+			assert_equal original_group['not_found'], g[:not_found?]
+			assert_equal original_group['age_restricted'], g['age_restricted?']
+			assert_equal original_group['age_restricted'], g[:age_restricted?]
+			assert_equal original_group['name'], g['name']
+			assert_equal original_group['name'], g[:name]
+
+			# Non-existant data
+			assert_nil g[:nameWOOOOOO]
+		end
+	end
+
 	def test_no_data
 		YAML.load_file('test/groups.yml')["groups"].each do |original_group|
 			stub_request(:get, original_group["url"]).
