@@ -21,7 +21,7 @@ groups:
   - id: Cambridge-Freegle
     url: http://groups.yahoo.com/group/Cambridge-Freegle/
     name: Cambridge-Freegle
-    description: 
+    description:
     not_found: false
     private: false
     age_restricted: false
@@ -37,69 +37,69 @@ groups:
     # non-existant group
   - id: Freecycle_MV
     url: http://groups.yahoo.com/group/Freecycle_MV/
-    name: 
-    description: 
+    name:
+    description:
     not_found: true
-    private: 
-    age_restricted: 
-    founded: 
-    language: 
-    num_members: 
-    category: 
-    post_email: 
-    subscribe_email: 
-    owner_email: 
-    unsubscribe_email: 
+    private:
+    age_restricted:
+    founded:
+    language:
+    num_members:
+    category:
+    post_email:
+    subscribe_email:
+    owner_email:
+    unsubscribe_email:
 
     # private / Members only groups
   - id: blackpool-freecycle
     url: http://groups.yahoo.com/group/blackpool-freecycle/
     name: blackpool-freecycle
-    description: 
+    description:
     not_found: false
     private: true
-    age_restricted: 
-    founded: 
-    language: 
-    num_members: 
-    category: 
-    post_email: 
-    subscribe_email: 
-    owner_email: 
-    unsubscribe_email: 
+    age_restricted:
+    founded:
+    language:
+    num_members:
+    category:
+    post_email:
+    subscribe_email:
+    owner_email:
+    unsubscribe_email:
 
   - id: anokacountyfc
     url: http://groups.yahoo.com/group/anokacountyfc/
     name: anokacountyfc
-    description: 
+    description:
     not_found: false
     private: true
-    age_restricted: 
-    founded: 
-    language: 
-    num_members: 
-    category: 
-    post_email: 
-    subscribe_email: 
-    owner_email: 
-    unsubscribe_email: 
+    age_restricted:
+    founded:
+    language:
+    num_members:
+    category:
+    post_email:
+    subscribe_email:
+    owner_email:
+    unsubscribe_email:
 
     # Age restricted group
   - id: Fetish_Groups
     url: http://groups.yahoo.com/group/Fetish_Groups/
-    name: 
-    description: 
+    name:
+    description:
     not_found: false
-    private: 
+    private:
     age_restricted: true
-    founded: 
-    language: 
-    num_members: 
-    category: 
-    post_email: 
-    subscribe_email: 
-    owner_email: 
-    unsubscribe_email: 
+    founded:
+    language:
+    num_members:
+    category:
+    post_email:
+    subscribe_email:
+    owner_email:
+    unsubscribe_email:
 
     # "Related Link:" in email address element
   - id: Dursleyfreecycle
@@ -129,7 +129,7 @@ groups:
     founded: 2007-03-30
     language: English
     num_members: 3051
-    category: 
+    category:
     post_email: redcar-cleveland-freegle@yahoogroups.com
     subscribe_email: redcar-cleveland-freegle-subscribe@yahoogroups.com
     owner_email: redcar-cleveland-freegle-owner@yahoogroups.com
