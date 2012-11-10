@@ -1,0 +1,2 @@
+before_script: "rake fetch_yahoo_pages"
+script: "rake test"
