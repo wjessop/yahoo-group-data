@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'nokogiri', '~> 1.5'
   gem.add_dependency 'yajl-ruby', '~> 1.1'
   gem.add_dependency 'curb', '~> 0.8'
+  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'webmock'
   gem.add_development_dependency 'simplecov'
 end
