@@ -94,3 +94,7 @@ Because of the dynamic nature of Yahoo groups it's quite possible that the numbe
 ### If you find a group the gem fails on
 
 Tell me about it, or (in preference) update the gem (Hint: start by adding an entry to the groups.yml file), see contributing instructions above.
+
+## Authors
+
+* Will Jessop (will@willj.net)
